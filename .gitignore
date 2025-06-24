@@ -1,0 +1,21 @@
+# fichiers Python compilés
+__pycache__/
+*.py[cod]
+
+# modèles sauvegardés
+*.keras
+*.h5
+
+# Spark ou MLflow
+artifacts/
+
+# fichiers de logs ou temporaires
+*.log
+*.tmp
+
+# fichiers Jupyter
+.ipynb_checkpoints/
+
+# données
+data/*.csv
+!data/personality_cleaned.csv   # garde ce fichier s’il est nettoyé
