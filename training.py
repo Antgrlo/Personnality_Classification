@@ -1,10 +1,14 @@
 from data import load_data
 from model import build_model
 import tensorflow as tf
+import random
 
 def train_model():
-    train_ds, test_ds, *_ = load_data()
+    # Choisir une graine aléatoire à chaque appel
+    seed = random.randint(0, 9999)
+    print(f"🎲 Utilisation de la graine random_state = {seed}")
 
+    train_ds, test_ds, *_ = load_data(random_state=seed)
     model = build_model(train_ds)
 
     history = model.fit(
